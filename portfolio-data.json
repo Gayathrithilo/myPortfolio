@@ -1,0 +1,238 @@
+{
+  "profile": {
+    "name": "Gayathri Shankaranarayanan",
+    "title": "Senior QA Engineer | Test Automation Specialist",
+    "location": "Chennai, India",
+    "email": "gayathrithilo@gmail.com",
+    "phone": "+91 9790645665",
+    "github": "https://github.com/Gayathrithilo/myPortfolio.git",
+    "summary": "5.5+ years driving test automation and quality assurance in payments infrastructure. Specialized in API automation, end-to-end testing, and building scalable automation frameworks with JavaScript, TypeScript, and modern testing tools."
+  },
+  "skills": [
+    {
+      "category": "Test Automation",
+      "items": [
+        "JavaScript, TypeScript",
+        "Cypress, Jest, Playwright",
+        "NX Monorepo",
+        "CI/CD Integration",
+        "Framework Architecture"
+      ]
+    },
+    {
+      "category": "API & Backend Testing",
+      "items": [
+        "RESTful API Testing",
+        "Schema Validation",
+        "Insomnia",
+        "Database Testing",
+        "Performance Testing"
+      ]
+    },
+    {
+      "category": "Mobile & Cross-Platform",
+      "items": [
+        "Android & iOS Testing",
+        "NFC-based Payments",
+        "Cross-device Testing",
+        "UI/UX Testing",
+        "Native App Testing"
+      ]
+    },
+    {
+      "category": "Testing Types",
+      "items": [
+        "Functional Testing",
+        "Integration Testing",
+        "E2E Testing",
+        "Regression Testing",
+        "Performance Testing"
+      ]
+    },
+    {
+      "category": "Tools & Workflows",
+      "items": [
+        "Git & GitHub",
+        "Linear (Bug Tracking)",
+        "Notion (Documentation)",
+        "Slack Integration",
+        "HTML, CSS"
+      ]
+    },
+    {
+      "category": "Industry & Domain",
+      "items": [
+        "Payments Infrastructure",
+        "Multi-service Platforms",
+        "Microservices Testing",
+        "Payment Networks",
+        "Agile Methodologies"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "AI-Powered Test Automation Agent",
+      "role": "Senior QA Engineer @ Surfboard Payments",
+      "description": "Built an intelligent automation agent using Claude Anthropic API that autonomously executes API test cases across multi-service payments platform.",
+      "highlights": [
+        "Claude API integration for autonomous test execution",
+        "Auto-generated detailed test reports",
+        "Slack integration for real-time failure notifications",
+        "Developer commit linking for rapid issue remediation"
+      ],
+      "technologies": ["TypeScript", "Claude API", "Slack", "Jest"],
+      "impact": "Reduced manual testing overhead by 40% and enabled real-time failure notifications"
+    },
+    {
+      "id": 2,
+      "title": "Multi-Service API Automation Framework",
+      "role": "Senior QA Engineer @ Surfboard Payments",
+      "description": "Designed and maintained scalable API test automation suite covering 100+ API calls across 10+ microservices using NX monorepo.",
+      "highlights": [
+        "Scaled from 1 to 7+ services without core logic rework",
+        "Implemented schema-mismatch detection",
+        "Automated schema validation & test coverage updates",
+        "Authentication setup across multiple services"
+      ],
+      "technologies": ["JavaScript", "TypeScript", "Jest", "NX Monorepo", "CI/CD"],
+      "impact": "Framework now supports 10+ microservices with zero regression in test execution"
+    },
+    {
+      "id": 3,
+      "title": "Terminal Management System (E2E Testing)",
+      "role": "Senior QA Engineer @ Surfboard Payments",
+      "description": "Built comprehensive E2E test automation for payment terminal management system including registration and device management workflows.",
+      "highlights": [
+        "Terminal registration workflows",
+        "Hardware device-model management",
+        "Serial-number validation",
+        "Multi-merchant flow support"
+      ],
+      "technologies": ["Playwright", "TypeScript", "E2E Testing", "Automation"],
+      "impact": "Achieved 95% test coverage for critical terminal management flows"
+    },
+    {
+      "id": 4,
+      "title": "Payment Terminal Testing (BP-55 & BP-5500)",
+      "role": "QA Engineer @ Surfboard Payments",
+      "description": "Comprehensive testing across multiple payment terminal versions, validating functionality across payment networks and payment types.",
+      "highlights": [
+        "Multi-network payment testing (Visa, MasterCard, Amex)",
+        "Contact & contactless payment validation",
+        "Mobile wallet testing",
+        "Performance & security testing"
+      ],
+      "technologies": ["Manual Testing", "Functional Testing", "Payment Networks", "API Testing"],
+      "impact": "Ensured 99.9% payment reliability across all tested terminals"
+    },
+    {
+      "id": 5,
+      "title": "Learning Platform (LendHope)",
+      "role": "QA Engineer @ LendHope",
+      "description": "Full QA coverage for entrepreneur training platform including dashboards and mobile application with cross-device testing.",
+      "highlights": [
+        "Portal & Admin Dashboard testing",
+        "Mobile app UI/UX validation",
+        "Cross-device testing (Android & iOS)",
+        "Data integrity & security testing"
+      ],
+      "technologies": ["Cypress", "JavaScript", "Mobile Testing", "UI/UX"],
+      "impact": "Launched mobile app with zero critical bugs in production"
+    },
+    {
+      "id": 6,
+      "title": "Automated Schema Validation System",
+      "role": "Senior QA Engineer @ Surfboard Payments",
+      "description": "Implemented intelligent schema-mismatch detection that automatically flags failing tests and updates coverage in response to backend changes.",
+      "highlights": [
+        "Automated schema validation",
+        "Coverage update automation",
+        "Test correctness preservation",
+        "Documentation automation"
+      ],
+      "technologies": ["TypeScript", "Jest", "Schema Validation", "Automation"],
+      "impact": "Reduced manual schema validation work by 70%"
+    }
+  ],
+  "experience": [
+    {
+      "position": "Senior Member of Technical Staff in Testing",
+      "company": "Surfboard Payments",
+      "location": "Chennai",
+      "startDate": "February 2021",
+      "endDate": "Present",
+      "duration": "5+ years",
+      "description": "Lead API & E2E test automation for multi-service payments platform",
+      "responsibilities": [
+        "Lead API & E2E test automation for multi-service payments platform (10+ microservices)",
+        "Architected scalable NX monorepo automation framework covering 100+ API calls",
+        "Developed AI-powered automation agent using Claude Anthropic API for autonomous testing",
+        "Implemented automated schema-mismatch detection improving suite reliability",
+        "Extended merchant-application automation for multi-merchant flows across partner configurations"
+      ],
+      "teamSize": 4,
+      "technologies": ["JavaScript", "TypeScript", "Jest", "Playwright", "CI/CD"]
+    },
+    {
+      "position": "QA Engineer - LendHope Project",
+      "company": "Surfboard Payments",
+      "location": "Chennai",
+      "startDate": "July 2021",
+      "endDate": "January 2023",
+      "duration": "1.5 years",
+      "description": "QA for entrepreneur training platform with dashboards and mobile app",
+      "responsibilities": [
+        "Conducted functional, integration, and usability testing on learning portal dashboards",
+        "Executed comprehensive mobile app testing across Android and iOS platforms",
+        "Performed cross-device testing ensuring smooth in-app navigation",
+        "Ensured data integrity through API testing and database validation"
+      ],
+      "teamSize": 4,
+      "technologies": ["Cypress", "JavaScript", "Linear", "Notion"]
+    },
+    {
+      "position": "Terminal Testing – Payment Systems",
+      "company": "Surfboard Payments",
+      "location": "Chennai",
+      "startDate": "March 2022",
+      "endDate": "December 2025",
+      "duration": "3+ years",
+      "description": "Testing payment terminal systems across multiple versions",
+      "responsibilities": [
+        "Coordinated testing across multiple payment terminal versions (BP-55, BP-5500)",
+        "Validated contact, contactless, and mobile wallet payments",
+        "Tested across multiple payment networks (MasterCard, VISA, AMEX)",
+        "Conducted functional, integration, and performance testing",
+        "Maintained comprehensive test documentation in Notion"
+      ],
+      "teamSize": 4,
+      "technologies": ["Manual Testing", "Linear", "Notion", "Payment Systems"]
+    }
+  ],
+  "education": [
+    {
+      "degree": "B.E., Computer Science and Engineering",
+      "institution": "SKP Engineering College, Tiruvannamalai",
+      "year": "2016 - 2020"
+    },
+    {
+      "degree": "H.S.C",
+      "institution": "SRGDS Matriculation Hr. Sec. School, Tiruvannamalai",
+      "year": "2015 - 2016"
+    },
+    {
+      "degree": "S.S.C",
+      "institution": "SRGDS Matriculation Hr. Sec. School, Tiruvannamalai",
+      "year": "2013 - 2014"
+    }
+  ],
+  "languages": ["Tamil", "English"],
+  "certifications": [],
+  "socialLinks": {
+    "github": "https://github.com/Gayathrithilo/myPortfolio.git",
+    "email": "gayathrithilo@gmail.com",
+    "phone": "+91 9790645665"
+  }
+}
