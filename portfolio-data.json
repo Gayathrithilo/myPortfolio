@@ -110,7 +110,7 @@
         "Serial-number validation",
         "Multi-merchant flow support"
       ],
-      "technologies": ["Playwright", "TypeScript", "E2E Testing", "Automation"],
+      "technologies": ["TypeScript", "E2E Testing", "Automation"],
       "impact": "Achieved 95% test coverage for critical terminal management flows"
     },
     {
@@ -129,8 +129,8 @@
     },
     {
       "id": 5,
-      "title": "Learning Platform (LendHope)",
-      "role": "QA Engineer @ LendHope",
+      "title": "Learning Platform (Project Name: LendHope)",
+      "role": "QA Engineer @ Surfboard Payments",
       "description": "Full QA coverage for entrepreneur training platform including dashboards and mobile application with cross-device testing.",
       "highlights": [
         "Portal & Admin Dashboard testing",
@@ -176,23 +176,6 @@
       "technologies": ["JavaScript", "TypeScript", "Jest", "Playwright", "CI/CD"]
     },
     {
-      "position": "QA Engineer - LendHope Project",
-      "company": "Surfboard Payments",
-      "location": "Chennai",
-      "startDate": "July 2021",
-      "endDate": "January 2023",
-      "duration": "1.5 years",
-      "description": "QA for entrepreneur training platform with dashboards and mobile app",
-      "responsibilities": [
-        "Conducted functional, integration, and usability testing on learning portal dashboards",
-        "Executed comprehensive mobile app testing across Android and iOS platforms",
-        "Performed cross-device testing ensuring smooth in-app navigation",
-        "Ensured data integrity through API testing and database validation"
-      ],
-      "teamSize": 4,
-      "technologies": ["Cypress", "JavaScript", "Linear", "Notion"]
-    },
-    {
       "position": "Terminal Testing – Payment Systems",
       "company": "Surfboard Payments",
       "location": "Chennai",
@@ -209,6 +192,23 @@
       ],
       "teamSize": 4,
       "technologies": ["Manual Testing", "Linear", "Notion", "Payment Systems"]
+    },
+    {
+      "position": "QA Engineer - LendHope Project",
+      "company": "Surfboard Payments",
+      "location": "Chennai",
+      "startDate": "July 2021",
+      "endDate": "January 2023",
+      "duration": "1.5 years",
+      "description": "QA for entrepreneur training platform with dashboards and mobile app",
+      "responsibilities": [
+        "Conducted functional, integration, and usability testing on learning portal dashboards",
+        "Executed comprehensive mobile app testing across Android and iOS platforms",
+        "Performed cross-device testing ensuring smooth in-app navigation",
+        "Ensured data integrity through API testing and database validation"
+      ],
+      "teamSize": 4,
+      "technologies": ["Cypress", "JavaScript", "Linear", "Notion"]
     }
   ],
   "education": [
