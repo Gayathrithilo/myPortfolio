@@ -42,38 +42,121 @@
             overflow: hidden;
         }
 
+        .mouse-halo {
+            position: fixed;
+            pointer-events: none;
+            z-index: 2;
+            width: 16rem;
+            height: 16rem;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.18) 0%, rgba(6, 182, 212, 0.08) 18%, transparent 55%);
+            transform: translate(-50%, -50%) scale(0.8);
+            opacity: 0;
+            transition: transform 0.2s ease, opacity 0.25s ease;
+            filter: blur(16px);
+            mix-blend-mode: screen;
+            will-change: transform, opacity;
+        }
+
+        .bg-aurora {
+            position: absolute;
+            display: block;
+            border-radius: 50%;
+            filter: blur(64px);
+            opacity: 0.35;
+            mix-blend-mode: screen;
+            animation: auroraDrift 18s ease-in-out infinite alternate;
+            will-change: transform, opacity;
+        }
+
+        .bg-aurora.cyan {
+            width: 48rem;
+            height: 28rem;
+            left: -12rem;
+            top: -8rem;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.48) 0%, rgba(6, 182, 212, 0.16) 40%, transparent 68%);
+        }
+
+        .bg-aurora.purple {
+            width: 42rem;
+            height: 32rem;
+            right: -10rem;
+            top: 8rem;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.42) 0%, rgba(139, 92, 246, 0.15) 38%, transparent 70%);
+            animation-duration: 26s;
+        }
+
+        .bg-aurora.teal {
+            width: 44rem;
+            height: 28rem;
+            left: 12%;
+            bottom: -10rem;
+            background: radial-gradient(circle, rgba(20, 184, 166, 0.42) 0%, rgba(20, 184, 166, 0.14) 40%, transparent 70%);
+            animation-duration: 22s;
+        }
+
+        .bg-aurora.alt {
+            width: 54rem;
+            height: 34rem;
+            left: 10%;
+            top: 18rem;
+            background: radial-gradient(circle, rgba(14, 142, 186, 0.16) 0%, transparent 60%);
+            animation-duration: 30s;
+            opacity: 0.22;
+        }
+
+        @keyframes auroraDrift {
+            0% {
+                transform: translate3d(0, 0, 0) scale(1);
+                opacity: 0.28;
+            }
+            50% {
+                transform: translate3d(4%, -3%, 0) scale(1.08);
+                opacity: 0.38;
+            }
+            100% {
+                transform: translate3d(-3%, 3%, 0) scale(1.12);
+                opacity: 0.32;
+            }
+        }
+
         .bg-shape {
             position: absolute;
-            opacity: 0.16;
+            opacity: 0.30;
             animation: floatAround linear infinite;
-            filter: blur(0.8px);
+            filter: blur(0.4px);
+            mix-blend-mode: screen;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            pointer-events: none;
         }
 
         .bg-shape.dot {
             width: 18px;
             height: 18px;
             border-radius: 50%;
-            background: rgba(90, 193, 255, 0.85);
-            box-shadow: 0 0 30px rgba(90, 193, 255, 0.25);
+            background: rgba(90, 193, 255, 0.24);
+            box-shadow: 0 0 20px rgba(90, 193, 255, 0.24);
         }
 
         .bg-shape.line {
-            width: 220px;
+            width: 240px;
             height: 1px;
-            border-top: 1px dashed rgba(255, 255, 255, 0.35);
-            opacity: 0.22;
+            border-top: 1px dashed rgba(255, 255, 255, 0.38);
+            opacity: 0.32;
         }
 
         .bg-shape.checkmark {
-            width: 54px;
-            height: 54px;
-            border-radius: 18px;
-            background: rgba(90, 193, 255, 0.12);
-            border: 1px solid rgba(90, 193, 255, 0.38);
+            width: 68px;
+            height: 68px;
+            border-radius: 20px;
+            background: rgba(90, 193, 255, 0.28);
+            border: 1px solid rgba(90, 193, 255, 0.32);
             display: grid;
             place-items: center;
             font-size: 1.2rem;
-            color: rgba(90, 193, 255, 0.85);
+            color: rgba(90, 193, 255, 0.96);
+            box-shadow: 0 0 22px rgba(90, 193, 255, 0.26);
+            opacity: 0.38;
         }
 
         .bg-shape.checkmark::before {
@@ -81,28 +164,32 @@
         }
 
         .bg-shape.square {
-            width: 84px;
-            height: 84px;
-            border-radius: 14px;
-            border: 1px solid rgba(90, 193, 255, 0.32);
-            box-shadow: inset 0 0 20px rgba(90, 193, 255, 0.08);
+            width: 90px;
+            height: 90px;
+            border-radius: 22px;
+            border: 1px solid rgba(90, 193, 255, 0.3);
+            box-shadow: inset 0 0 18px rgba(90, 193, 255, 0.24);
+            background: rgba(255,255,255,0.12);
+            opacity: 0.32;
         }
 
         .bg-shape.bug {
-            width: 72px;
-            height: 72px;
-            border-radius: 18px;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            width: 84px;
+            height: 84px;
+            border-radius: 20px;
+            background: rgba(139, 92, 246, 0.28);
+            border: 1px solid rgba(139, 92, 246, 0.26);
+            box-shadow: inset 0 0 20px rgba(139, 92, 246, 0.2);
+            opacity: 0.32;
         }
 
         .bg-shape.bug::before,
         .bg-shape.bug::after {
             content: '';
             position: absolute;
-            width: 24px;
+            width: 28px;
             height: 2px;
-            background: rgba(90, 193, 255, 0.45);
+            background: rgba(90, 193, 255, 0.34);
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%) rotate(45deg);
@@ -112,16 +199,430 @@
             transform: translate(-50%, -50%) rotate(-45deg);
         }
 
+        .bg-shape.bug-check {
+            width: 84px;
+            height: 84px;
+            border-radius: 20px;
+            background: rgba(90, 193, 255, 0.22);
+            border: 1px solid rgba(90, 193, 255, 0.32);
+            box-shadow: inset 0 0 18px rgba(90, 193, 255, 0.16);
+            opacity: 0.32;
+        }
+
+        .bg-shape.bug-check::before,
+        .bg-shape.bug-check::after {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 24px;
+            height: 24px;
+            display: grid;
+            place-items: center;
+            font-size: 1rem;
+            color: rgba(90, 193, 255, 0.7);
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            animation: bugToCheck 12s ease-in-out infinite;
+        }
+
+        .bg-shape.bug-check::before {
+            content: '🐛';
+            animation-delay: 0s;
+        }
+
+        .bg-shape.bug-check::after {
+            content: '✓';
+            animation-delay: 6s;
+        }
+
+        @keyframes bugToCheck {
+            0%, 35%, 100% { opacity: 1; }
+            45%, 95% { opacity: 0; }
+        }
+
+        .bg-shape.terminal {
+            width: 11rem;
+            padding: 0.8rem 0.9rem;
+            border-radius: 1rem;
+            background: rgba(5, 15, 35, 0.96);
+            border: 1px solid rgba(90, 193, 255, 0.28);
+            box-shadow: 0 18px 44px rgba(6, 182, 212, 0.22);
+            color: #b5d8ff;
+            font-size: 0.76rem;
+            line-height: 1.35;
+            letter-spacing: 0.01em;
+            opacity: 0.42;
+        }
+
+        .bg-shape.terminal::before {
+            content: 'npm run test';
+            display: block;
+        }
+
+        .bg-shape.json {
+            width: 10rem;
+            padding: 0.8rem 0.9rem;
+            border-radius: 1rem;
+            background: rgba(10, 15, 36, 0.96);
+            border: 1px solid rgba(90, 193, 255, 0.28);
+            box-shadow: 0 18px 44px rgba(90, 193, 255, 0.22);
+            color: #dbeafe;
+            font-size: 0.72rem;
+            line-height: 1.4;
+            letter-spacing: 0.01em;
+            opacity: 0.42;
+            text-align: left;
+        }
+
+        .bg-shape.json::before {
+            content: '{"status":"pass","code":200}';
+            display: block;
+        }
+
+        .bg-shape.git {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.24);
+            border: 1px solid rgba(255, 255, 255, 0.32);
+            display: grid;
+            place-items: center;
+            color: rgba(248, 150, 94, 0.98);
+            font-size: 1.1rem;
+            opacity: 0.42;
+        }
+
+        .bg-shape.git::before {
+            content: '';
+            font-family: 'Segoe UI Symbol', 'Arial Unicode MS', sans-serif;
+        }
+
+        .bg-shape.ts {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            background: rgba(56, 102, 177, 0.42);
+            border: 1px solid rgba(56, 102, 177, 0.42);
+            display: grid;
+            place-items: center;
+            color: rgba(56, 102, 177, 1);
+            font-size: 1rem;
+            font-weight: 800;
+            opacity: 0.42;
+        }
+
+        .bg-shape.ts::before {
+            content: 'TS';
+        }
+
+        .bg-shape.js {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            background: rgba(248, 218, 19, 0.42);
+            border: 1px solid rgba(248, 218, 19, 0.42);
+            display: grid;
+            place-items: center;
+            color: rgba(248, 218, 19, 1);
+            font-size: 1rem;
+            font-weight: 800;
+            opacity: 0.42;
+        }
+
+        .bg-shape.js::before {
+            content: 'JS';
+        }
+
+        .bg-shape.playwright {
+            width: 70px;
+            height: 70px;
+            border-radius: 20px;
+            background: rgba(139, 92, 246, 0.34);
+            border: 1px solid rgba(139, 92, 246, 0.34);
+            color: rgba(139, 92, 246, 0.98);
+            display: grid;
+            place-items: center;
+            font-size: 1.5rem;
+            opacity: 0.42;
+        }
+
+        .bg-shape.playwright::before {
+            content: '▶';
+        }
+
+        .bg-shape.qa {
+            width: 84px;
+            height: 84px;
+            border-radius: 24px;
+            background: rgba(20, 184, 166, 0.42);
+            border: 1px solid rgba(20, 184, 166, 0.38);
+            box-shadow: inset 0 0 18px rgba(20, 184, 166, 0.2);
+            display: grid;
+            place-items: center;
+            color: rgba(20, 184, 166, 0.98);
+            font-size: 0.95rem;
+            font-weight: 700;
+            opacity: 0.42;
+        }
+
+        .bg-shape.qa::before {
+            content: 'QA';
+        }
+
+        .bg-shape.cicd {
+            width: 10rem;
+            height: 2.4rem;
+            border-radius: 1.2rem;
+            background: rgba(20, 184, 166, 0.42);
+            border: 1px solid rgba(20, 184, 166, 0.42);
+            display: grid;
+            place-items: center;
+            color: rgba(20, 184, 166, 0.98);
+            font-size: 0.82rem;
+            font-weight: 700;
+            opacity: 0.42;
+        }
+
+        .bg-shape.cicd::before {
+            content: 'CI/CD';
+        }
+
+        .bg-shape.timeline {
+            width: 10rem;
+            height: 2.4rem;
+            border-radius: 1.2rem;
+            background: rgba(90, 193, 255, 0.42);
+            border: 1px solid rgba(90, 193, 255, 0.32);
+            display: grid;
+            place-items: center;
+            color: rgba(255, 255, 255, 0.98);
+            font-size: 0.72rem;
+            opacity: 0.42;
+        }
+
+        .bg-shape.timeline::before {
+            content: 'test → run → pass';
+        }
+
+        .bg-shape.doc {
+            width: 70px;
+            height: 84px;
+            border-radius: 18px;
+            background: rgba(6, 182, 212, 0.42);
+            border: 1px solid rgba(6, 182, 212, 0.48);
+            box-shadow: 0 0 32px rgba(6, 182, 212, 0.28);
+            opacity: 0.42;
+        }
+
+        .bg-shape.doc::before {
+            content: '';
+            position: absolute;
+            left: 16px;
+            top: 18px;
+            width: 36px;
+            height: 50px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.08);
+            box-shadow: inset 0 0 4px rgba(255,255,255,0.16);
+        }
+
+        .bg-shape.api {
+            width: 66px;
+            height: 66px;
+            border-radius: 50%;
+            background: rgba(20, 184, 166, 0.42);
+            border: 1px solid rgba(20, 184, 166, 0.48);
+            color: rgba(20, 184, 166, 1);
+            display: grid;
+            place-items: center;
+            font-size: 0.85rem;
+            font-weight: 800;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            box-shadow: 0 0 32px rgba(20, 184, 166, 0.32);
+            opacity: 0.42;
+        }
+
+        .bg-shape.api::before {
+            content: 'API';
+        }
+
+        .bg-shape.schema {
+            width: 70px;
+            height: 70px;
+            border-radius: 20px;
+            background: rgba(139, 92, 246, 0.42);
+            border: 1px solid rgba(139, 92, 246, 0.58);
+            color: rgba(139, 92, 246, 1);
+            display: grid;
+            place-items: center;
+            font-size: 0.82rem;
+            font-weight: 800;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            box-shadow: 0 0 32px rgba(139, 92, 246, 0.32);
+            opacity: 0.42;
+        }
+
+        .bg-shape.schema::before {
+            content: 'S';
+        }
+
+        .bg-shape.snippet {
+            width: 12rem;
+            padding: 0.9rem 1rem;
+            border-radius: 1rem;
+            background: rgba(10, 22, 38, 0.96);
+            border: 1px solid rgba(6, 182, 212, 0.32);
+            box-shadow: 0 18px 46px rgba(6, 182, 212, 0.28);
+            color: #dbeafe;
+            font-size: 0.82rem;
+            line-height: 1.4;
+            letter-spacing: 0.03em;
+            opacity: 0.62;
+            animation: floatAround 20s ease-in-out infinite, snippetFade 16s ease-in-out infinite;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.35rem;
+        }
+
+        .bg-shape.snippet .method {
+            color: #7dd3fc;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+        }
+
+        .bg-shape.snippet .status {
+            color: #86efac;
+            font-weight: 700;
+        }
+
+        .bg-shape.snippet .short {
+            color: #bfdbfe;
+            opacity: 0.9;
+        }
+
+        .bg-shape.snippet.visible {
+            opacity: 0.9;
+        }
+
+        @keyframes snippetFade {
+            0%, 100% {
+                opacity: 0;
+                transform: translateY(0) translateX(0) scale(0.98);
+            }
+            15%, 85% {
+                opacity: 1;
+                transform: translateY(-4px) translateX(4px) scale(1);
+            }
+        }
+
         @keyframes floatAround {
             0% {
                 transform: translateY(0) translateX(0) rotate(0deg);
             }
+            25% {
+                transform: translateY(-16px) translateX(10px) rotate(4deg);
+            }
             50% {
                 transform: translateY(-24px) translateX(20px) rotate(8deg);
+            }
+            75% {
+                transform: translateY(-16px) translateX(10px) rotate(4deg);
             }
             100% {
                 transform: translateY(0) translateX(0) rotate(0deg);
             }
+        }
+
+        .hero-pipeline {
+            display: grid;
+            grid-template-columns: repeat(5, auto);
+            gap: 1rem 1.5rem;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2rem;
+            opacity: 0.92;
+            z-index: 3;
+            position: relative;
+        }
+
+        .pipeline-step {
+            position: relative;
+            padding: 1rem 1.25rem;
+            min-width: 8rem;
+            border-radius: 1.25rem;
+            background: rgba(15, 32, 59, 0.75);
+            border: 1px solid rgba(255,255,255,0.08);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+            color: var(--text-light);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.14em;
+            font-weight: 700;
+            display: grid;
+            place-items: center;
+            transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .pipeline-step::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -1.75rem;
+            width: 2rem;
+            height: 2px;
+            background: rgba(255,255,255,0.18);
+            transform: translateY(-50%);
+        }
+
+        .pipeline-step:last-child::after {
+            display: none;
+        }
+
+        .pipeline-step.active {
+            background: rgba(20, 184, 166, 0.18);
+            border-color: rgba(20, 184, 166, 0.45);
+            color: white;
+            box-shadow: 0 24px 48px rgba(20, 184, 166, 0.16);
+            transform: translateY(-4px);
+        }
+
+        .pipeline-step.active::before {
+            content: '✓';
+            position: absolute;
+            top: -0.65rem;
+            right: -0.55rem;
+            width: 1.4rem;
+            height: 1.4rem;
+            border-radius: 50%;
+            background: var(--primary);
+            color: #071025;
+            display: grid;
+            place-items: center;
+            font-size: 0.8rem;
+            box-shadow: 0 0 18px rgba(20, 184, 166, 0.35);
+        }
+
+        .pipeline-step.inactive {
+            opacity: 0.56;
+            transform: translateY(0);
+        }
+
+        .pipeline-step .step-label {
+            pointer-events: none;
+        }
+
+        .pipeline-step span,
+        .pipeline-step strong {
+            display: block;
+        }
+
+        .pipeline-step .step-name {
+            margin-top: 0.35rem;
+            font-size: 0.78rem;
+            letter-spacing: 0.14em;
+            color: currentColor;
         }
 
         .visible {
@@ -384,22 +885,37 @@
             font-weight: 900;
             margin: 0;
             letter-spacing: 0.04em;
-            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
-            background-size: 200% 200%;
+            background: linear-gradient(90deg, #14B8A6 0%, #06B6D4 25%, #3B82F6 50%, #8B5CF6 75%, #14B8A6 100%);
+            background-size: 300% 300%;
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
             text-shadow: 0 14px 50px rgba(139,92,246,0.08), 0 4px 18px rgba(6,182,212,0.08);
-            animation: gradientShift 7s ease infinite;
+            animation: gradientShift 12s ease infinite;
             transform: translateZ(0);
         }
 
         .hero-title {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            min-height: 1.5rem;
             color: var(--text-light);
             font-size: clamp(1rem, 2vw, 1.15rem);
             letter-spacing: 0.18em;
             text-transform: uppercase;
             margin-top: 0.4rem;
+            font-weight: 700;
+        }
+
+        .hero-title-cursor {
+            color: var(--primary);
+            animation: blinkCursor 0.7s steps(1) infinite;
+            font-weight: 700;
+        }
+
+        @keyframes blinkCursor {
+            50% { opacity: 0; }
         }
 
         .hero-explore {
@@ -969,12 +1485,37 @@
 </head>
 <body>
     <div class="bg-animations">
-        <span class="bg-shape dot" style="top: 12%; left: 8%; animation-duration: 14s;"></span>
-        <span class="bg-shape line" style="top: 18%; right: 10%; animation-duration: 12s;"></span>
+        <span class="bg-aurora cyan"></span>
+        <span class="bg-aurora purple"></span>
+        <span class="bg-aurora teal"></span>
+        <span class="bg-aurora alt"></span>
+        <span class="bg-shape api" style="top: 12%; left: 10%; animation-duration: 16s;"></span>
+        <span class="bg-shape schema" style="top: 20%; left: 26%; animation-duration: 18s;"></span>
+        <span class="bg-shape snippet" style="top: 14%; right: 12%; animation-duration: 22s;">
+            <span class="method">GET /payments</span>
+            <span class="short">200 OK</span>
+            <span class="status">✓ Passed</span>
+        </span>
+        <span class="bg-shape terminal" style="top: 34%; left: 8%; animation-duration: 20s;"></span>
+        <span class="bg-shape timeline" style="top: 36%; left: 28%; animation-duration: 26s;"></span>
+        <span class="bg-shape git" style="top: 18%; right: 10%; animation-duration: 18s;"></span>
+        <span class="bg-shape js" style="top: 28%; right: 24%; animation-duration: 24s;"></span>
+        <span class="bg-shape ts" style="top: 8%; left: 64%; animation-duration: 22s;"></span>
+        <span class="bg-shape playwright" style="top: 16%; left: 72%; animation-duration: 20s;"></span>
+        <span class="bg-shape cicd" style="top: 62%; left: 34%; animation-duration: 28s;"></span>
+        <span class="bg-shape doc" style="top: 52%; left: 14%; animation-duration: 24s;"></span>
+        <span class="bg-shape bug-check" style="bottom: 16%; right: 24%; animation-duration: 20s;"></span>
         <span class="bg-shape checkmark" style="bottom: 22%; left: 16%; animation-duration: 16s;"></span>
+        <span class="bg-shape snippet" style="bottom: 24%; right: 18%; animation-duration: 24s;">
+            <span class="method">PATCH /merchant</span>
+            <span class="status">✓ Success</span>
+        </span>
+        <span class="bg-shape json" style="bottom: 12%; left: 48%; animation-duration: 26s;"></span>
+        <span class="bg-shape dot" style="top: 40%; right: 14%; animation-duration: 16s;"></span>
         <span class="bg-shape square" style="top: 62%; left: 72%; animation-duration: 20s;"></span>
-        <span class="bg-shape bug" style="bottom: 15%; right: 14%; animation-duration: 18s;"></span>
+        <span class="bg-shape qa" style="bottom: 18%; left: 52%; animation-duration: 24s;"></span>
     </div>
+    <div class="mouse-halo" id="mouseHalo"></div>
     <!-- Header -->
     <header>
         <nav>
@@ -992,7 +1533,10 @@
     <section class="hero" role="region" aria-label="Landing">
         <div class="hero-inner">
             <h1 class="hero-name" id="heroName" aria-live="polite">Gayathri Shankaranarayanan</h1>
-            <p class="hero-title">Senior QA Automation Engineer</p>
+            <p class="hero-title" aria-live="polite">
+                <span id="heroTitleText">Senior QA Automation Engineer</span>
+                <span class="hero-title-cursor" aria-hidden="true">|</span>
+            </p>
             <button class="hero-explore" id="exploreBtn" type="button" aria-label="Scroll to skills">
                 <span class="sr-only">Scroll to skills</span>
                 <svg class="hero-icon" viewBox="0 0 20 34" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -1005,8 +1549,14 @@
                     </g>
                 </svg>
             </button>
+            <div class="hero-pipeline" aria-hidden="true">
+                <div class="pipeline-step" data-step="API"><strong>API</strong><span class="step-name">Request</span></div>
+                <div class="pipeline-step" data-step="Schema"><strong>Schema</strong><span class="step-name">Validation</span></div>
+                <div class="pipeline-step" data-step="Automation"><strong>Automation</strong><span class="step-name">Execution</span></div>
+                <div class="pipeline-step" data-step="CI/CD"><strong>CI/CD</strong><span class="step-name">Pipeline</span></div>
+                <div class="pipeline-step" data-step="PASS"><strong>PASS</strong><span class="step-name">✓</span></div>
+            </div>
         </div>
-        <div class="hero-particles" aria-hidden="true"></div>
     </section>
 
     <!-- Skills Section -->
@@ -1355,7 +1905,6 @@
             const speed = 45;
             const typer = setInterval(() => {
                 if (i < full.length) {
-                    // insert before cursor
                     cursor.insertAdjacentText('beforebegin', full[i]);
                     i++;
                 } else {
@@ -1365,29 +1914,102 @@
             }, speed);
         })();
 
-        /* Hero particles: lightweight DOM elements using existing .bg-shape styles */
-        (function heroParticles(){
-            const container = document.querySelector('.hero-particles');
-            if (!container) return;
-            const shapes = ['dot','checkmark','square','line'];
-            const count = 10; // keep small for performance
-            for (let i=0;i<count;i++){
-                const s = document.createElement('span');
-                const klass = shapes[i % shapes.length];
-                s.className = 'bg-shape ' + klass;
-                s.style.left = Math.random()*90 + '%';
-                s.style.top = Math.random()*80 + '%';
-                s.style.opacity = (0.06 + Math.random()*0.18).toFixed(2);
-                s.style.animationDuration = (10 + Math.random()*18).toFixed(2) + 's';
-                s.style.transform = `translate3d(0,0,0)`;
-                container.appendChild(s);
+        /* Rotating professional titles under the hero name */
+        (function titleCycler(){
+            const el = document.getElementById('heroTitleText');
+            if (!el) return;
+
+            const titles = [
+                'Senior QA Automation Engineer',
+                'API Test Automation Specialist',
+                'Software Testing Expert',
+                'AI Test Automation Enthusiast'
+            ];
+
+            let titleIndex = 0;
+            let charIndex = 0;
+            let deleting = false;
+            let timer;
+
+            const typeSpeed = 80;
+            const deleteSpeed = 55;
+            const pauseDuration = 1400;
+
+            function tick() {
+                const currentTitle = titles[titleIndex];
+
+                if (!deleting) {
+                    el.textContent = currentTitle.slice(0, charIndex + 1);
+                    charIndex += 1;
+
+                    if (charIndex === currentTitle.length) {
+                        timer = setTimeout(() => {
+                            deleting = true;
+                            tick();
+                        }, pauseDuration);
+                        return;
+                    }
+                } else {
+                    el.textContent = currentTitle.slice(0, charIndex - 1);
+                    charIndex -= 1;
+
+                    if (charIndex === 0) {
+                        deleting = false;
+                        titleIndex = (titleIndex + 1) % titles.length;
+                    }
+                }
+
+                timer = setTimeout(tick, deleting ? deleteSpeed : typeSpeed);
             }
+
+            tick();
         })();
 
-        /* Custom cursor
-           lightweight: follows mouse and grows on interactive hover */
+        /* Hero pipeline animation: sequential QA step activation */
+        (function heroPipeline(){
+            const steps = document.querySelectorAll('.hero-pipeline .pipeline-step');
+            if (!steps.length) return;
+
+            let activeIndex = 0;
+            const delay = 2000;
+
+            function activate(index) {
+                steps.forEach((step, idx) => {
+                    step.classList.toggle('active', idx === index);
+                    step.classList.toggle('inactive', idx !== index);
+                });
+            }
+
+            activate(activeIndex);
+
+            setInterval(() => {
+                activeIndex = (activeIndex + 1) % steps.length;
+                activate(activeIndex);
+            }, delay);
+        })();
+
+        /* Custom cursor halo */
         (function customCursor(){
-            // custom cursor disabled — using native system cursor for accessibility and user preference
+            const halo = document.getElementById('mouseHalo');
+            if (!halo) return;
+
+            let timeout;
+            document.addEventListener('mousemove', event => {
+                const x = event.clientX;
+                const y = event.clientY;
+                halo.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%) scale(1)`;
+                halo.style.opacity = '1';
+
+                clearTimeout(timeout);
+                timeout = setTimeout(() => {
+                    halo.style.opacity = '0';
+                    halo.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%) scale(0.8)`;
+                }, 180);
+            });
+
+            document.addEventListener('mouseleave', () => {
+                halo.style.opacity = '0';
+            });
         })();
 
         /* Hero CTA button and smooth scroll transition */
