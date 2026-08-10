@@ -1,72 +1,68 @@
 {
   "profile": {
     "name": "Gayathri Shankaranarayanan",
-    "title": "Senior QA Engineer | Test Automation Specialist",
+    "title": "Senior Automation QA Engineer (SDET)",
     "location": "Chennai, India",
     "email": "gayathrithilo@gmail.com",
     "phone": "+91 9790645665",
-    "github": "https://github.com/Gayathrithilo/myPortfolio.git",
-    "summary": "5.5+ years driving test automation and quality assurance in payments infrastructure. Specialized in API automation, end-to-end testing, and building scalable automation frameworks with JavaScript, TypeScript, and modern testing tools."
+    "github": "https://github.com/Gayathrithilo",
+    "summary": "Senior Automation QA Engineer (SDET) with almost 6 years progressive growth. Expert in test automation frameworks achieving 60% coverage increase, 75% regression time reduction, and 45% MTTR improvement. Demonstrated expertise in compliance architecture, microservices testing, and leading technical teams while delivering zero production-impacting defects."
   },
   "skills": [
     {
-      "category": "Test Automation",
+      "category": "Automation",
       "items": [
         "JavaScript, TypeScript",
-        "Cypress, Jest, Playwright",
-        "NX Monorepo",
-        "CI/CD Integration",
-        "Framework Architecture"
+        "Playwright, Jest, Cypress",
+        "NX Test Monorepo",
+        "TDD, automation framework design"
       ]
     },
     {
-      "category": "API & Backend Testing",
+      "category": "API",
       "items": [
-        "RESTful API Testing",
+        "RESTful Testing",
         "Schema Validation",
         "Insomnia",
-        "Database Testing",
-        "Performance Testing"
+        "API test strategy"
       ]
     },
     {
-      "category": "Mobile & Cross-Platform",
-      "items": [
-        "Android & iOS Testing",
-        "NFC-based Payments",
-        "Cross-device Testing",
-        "UI/UX Testing",
-        "Native App Testing"
-      ]
-    },
-    {
-      "category": "Testing Types",
+      "category": "Testing",
       "items": [
         "Functional Testing",
         "Integration Testing",
         "E2E Testing",
-        "Regression Testing",
-        "Performance Testing"
+        "Regression, Performance, Load, Security",
+        "Manual Testing"
       ]
     },
     {
-      "category": "Tools & Workflows",
+      "category": "Mobile",
       "items": [
-        "Git & GitHub",
-        "Linear (Bug Tracking)",
-        "Notion (Documentation)",
-        "Slack Integration",
-        "HTML, CSS"
+        "Android, iOS",
+        "NFC Testing",
+        "Cross-device testing",
+        "Mobile usability validation"
       ]
     },
     {
-      "category": "Industry & Domain",
+      "category": "DevOps",
       "items": [
-        "Payments Infrastructure",
-        "Multi-service Platforms",
-        "Microservices Testing",
-        "Payment Networks",
-        "Agile Methodologies"
+        "CI/CD",
+        "Git",
+        "Claude API",
+        "Slack, Jira, Linear, Notion"
+      ]
+    },
+    {
+      "category": "Domain & Expertise",
+      "items": [
+        "Merchant Systems",
+        "Payments & Terminal Systems",
+        "Microservices Architecture",
+        "Agile/Scrum, Test Strategy, Defect Management",
+        "Leadership"
       ]
     }
   ],
